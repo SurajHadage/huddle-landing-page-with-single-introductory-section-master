@@ -1,0 +1,125 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --white: hsl(0,0%,100%);
+  --poppins: 'Poppins', sans-serif;
+  --OpenSans: 'Open Sans', sans-serif;
+}
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    min-height: 100vh;
+    font-family: var(--OpenSans);
+    background-image: url(images/bg-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+}
+.logo {
+  padding: 4em;
+  width: fit-content;
+}
+main {
+  display: flex;
+  padding: 0 4em;
+}
+.main-img {
+  flex-basis: 50%;
+  position: relative;
+}
+.main-img img {
+  width: 100%;
+  height: 100%;
+  width: clamp(350px, 100%, 680px);
+}
+article {
+  flex-basis: 50%;
+  padding: 3em;
+}
+h1 {
+  font-size: 2.25em;
+  font-weight: 600;
+  color: var(--white);
+  font-family: var(--poppins);
+}
+p {
+  color: var(--white);
+  margin-block-start: 2.5em;
+  line-height: 1.6;
+}
+.btn {
+  border: none;
+  background-color: white;
+  padding: 1.25em 5em;
+  border-radius: 3em;
+  color: var(--Violet);
+  margin-block-start: 1em;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 4px 4px 2px rgba(0,0,0,0.25);
+  box-shadow: 0px 4px 4px 2px rgba(0,0,0,0.25);
+}
+aside {
+  text-align: right;
+  padding: 30px 4em;
+}
+aside img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 8px;
+}
+@media (max-width:480px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .logo img {
+    width: 150px;
+  }
+  .logo, main {
+    padding: 1em;
+  }
+  main {
+    flex-direction: column;
+  }
+  .main-img {
+    align-self: center;
+  }
+  .main-img img {
+    width: 300px;
+  }
+  article {
+    padding: 2em 1em;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  aside {
+    text-align: center;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  
+  .logo img {
+    width: 240px;
+  }
+  .logo, main {
+    padding: 2em;
+  }
+  main {
+    flex-direction: column;
+  }
+  article {
+    padding: 0;
+    text-align: center;
+  }
+  aside {
+    text-align: center;
+  }
+}
